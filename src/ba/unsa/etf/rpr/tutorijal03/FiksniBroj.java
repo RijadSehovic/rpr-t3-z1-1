@@ -12,7 +12,9 @@ public class FiksniBroj extends TelefonskiBroj {
         return 0;
     }
 
-    enum Grad { SARAJEVO, TUZLA, ZENICA, BRCKO};
+
+
+   public enum Grad { SARAJEVO, TUZLA, ZENICA, BRCKO}
     Grad grad;
         String broj;
 
