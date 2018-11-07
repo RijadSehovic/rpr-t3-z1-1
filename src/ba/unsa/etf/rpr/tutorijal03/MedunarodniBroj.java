@@ -1,16 +1,22 @@
 package ba.unsa.etf.rpr.tutorijal03;
+
 import java.util.Objects;
-public class MedunarodniBroj {
+
+public class MedunarodniBroj extends TelefonskiBroj {
+
     private String drzava;
     private String broj;
+
     MedunarodniBroj(String drzava, String broj){
         this.drzava=drzava;
         this.broj=broj;
     }
+
     @Override
     public String ispisi(){
         return drzava+"/"+broj;
     }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
@@ -19,6 +25,7 @@ public class MedunarodniBroj {
         return Objects.equals(drzava, that.drzava) &&
                 Objects.equals(broj, that.broj);
     }
+
     @Override
     public int hashCode() {
         return Objects.hash(drzava, broj);
