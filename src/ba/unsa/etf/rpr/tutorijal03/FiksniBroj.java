@@ -76,4 +76,4 @@ public class FiksniBroj extends TelefonskiBroj implements Comparable<TelefonskiB
     }
 
 
-}}
+}

@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/etf.unsa.ba/etf.unsa.ba.iml" filepath="$PROJECT_DIR$/etf.unsa.ba/etf.unsa.ba.iml" />
       <module fileurl="file://$PROJECT_DIR$/rpr-t3-z1.iml" filepath="$PROJECT_DIR$/rpr-t3-z1.iml" />
     </modules>
   </component>
