@@ -1,6 +1,9 @@
 package ba.unsa.etf.rpr.tutorijal03;
+
 import java.util.Objects;
-public class FiksniBroj extends TelefonskiBroj {
+
+public class FiksniBroj extends TelefonskiBroj implements Comparable<TelefonskiBroj> {
+
     public enum Grad{
         SARAJEVO("033"),
         TUZLA("035"),
@@ -22,9 +25,15 @@ public class FiksniBroj extends TelefonskiBroj {
         PALE("057"),
         FOCA("058"),
         TREBINJE("059");
+
         private final String pozivniBroj;
+
         Grad(String pozivniBroj){
             this.pozivniBroj=pozivniBroj;
+        }
+
+        public final String getPozivniBroj(){
+            return pozivniBroj;
         }
     }
     private Grad grad;
@@ -33,22 +42,38 @@ public class FiksniBroj extends TelefonskiBroj {
         this.grad=grad;
         this.broj=broj;
     }
-    /*public String ispisi(){
-   @Override
-   public boolean equals(Object o) {
-       if (this == o) return true;
-       if (!(o instanceof FiksniBroj)) return false;
-       FiksniBroj that = (FiksniBroj) o;
-       return grad == that.grad &&
-               Objects.equals(broj, that.broj);
-   }
-    }*/
+
+    public Grad getGrad() {
+        return grad;
+    }
+
+    public void setGrad(Grad grad) {
+        this.grad = grad;
+    }
+
+    @Override
+    public int compareTo(TelefonskiBroj broj) {
+        return this.ispisi().compareTo(broj.ispisi());
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (!(o instanceof FiksniBroj)) return false;
+        FiksniBroj that = (FiksniBroj) o;
+        return grad == that.grad &&
+                Objects.equals(broj, that.broj);
+    }
+
     @Override
     public int hashCode() {
         return Objects.hash(grad, broj);
     }
+
     @Override
     public String ispisi(){
-        return grad+"/"+broj;
+        return grad.pozivniBroj+"/"+broj;
     }
-}
+
+
+}}
