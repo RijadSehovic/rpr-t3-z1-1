@@ -1,11 +1,12 @@
 package ba.unsa.etf.rpr.tutorijal03;
 
-import org.junit.Test;
+
+import org.junit.jupiter.api.Test;
 
 import java.util.Set;
 
 import static ba.unsa.etf.rpr.tutorijal03.FiksniBroj.Grad.SARAJEVO;
-import static junit.framework.TestCase.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 class ImenikTest {
 
