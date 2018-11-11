@@ -1,5 +1,7 @@
 package ba.unsa.etf.rpr.tutorijal03;
 
+import org.jetbrains.annotations.Contract;
+
 import java.util.Objects;
 
 public class FiksniBroj extends TelefonskiBroj implements Comparable<TelefonskiBroj> {
@@ -32,6 +34,7 @@ public class FiksniBroj extends TelefonskiBroj implements Comparable<TelefonskiB
             this.pozivniBroj=pozivniBroj;
         }
 
+        @Contract(pure = true)
         public final String getPozivniBroj(){
             return pozivniBroj;
         }
